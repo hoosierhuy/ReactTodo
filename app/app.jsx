@@ -1,7 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 import TodoApp from 'TodoApp';
+import * as actions from './actions/actions';
+const configureStore = require('configureStore').configureStore();
+
+
+configureStore.subscribe(() => {
+  console.log('New state', configureStore.getState());
+});
+
+configureStore.dispatch(actions.addTodo('clean apartment'));
+configureStore.dispatch(actions.setSearchText('apartment'));
+configureStore.dispatch(actions.toggleShowCompleted());
 
 // Load foundation
 $(document).foundation();
@@ -10,6 +22,8 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-  <TodoApp/>,
+  <Provider store={configureStore}>
+    <TodoApp/>
+  </Provider>,
   document.getElementById('todo-app')
 );
