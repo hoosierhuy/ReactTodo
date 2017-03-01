@@ -11,15 +11,12 @@ configureStore.subscribe(() => {
   console.log('New state', configureStore.getState());
 });
 
-configureStore.dispatch(actions.addTodo('clean apartment'));
-configureStore.dispatch(actions.setSearchText('apartment'));
-configureStore.dispatch(actions.toggleShowCompleted());
 
 // Load foundation
 $(document).foundation();
 
 // App css
-require('style!css!sass!applicationStyles')
+require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
   <Provider store={configureStore}>
