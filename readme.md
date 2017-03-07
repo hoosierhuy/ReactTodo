@@ -1,1 +1,1 @@
-Boilerplate React App
+The obligatory todo app.
