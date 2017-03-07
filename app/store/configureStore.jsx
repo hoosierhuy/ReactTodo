@@ -1,7 +1,7 @@
 const redux = require('redux');
 import {searchTextReducer, showCompletedReducer, todosReducer} from './../reducers/reducers';
 
-export const configureStore = (initialState = {}) => {
+export const configure = (initialState = {}) => {
   const reducer = redux.combineReducers({
     searchText: searchTextReducer,
     showCompleted: showCompletedReducer,

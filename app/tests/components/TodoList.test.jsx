@@ -5,7 +5,7 @@ import expect from 'expect';
 import TestUtils from 'react-addons-test-utils';
 import $ from 'jQuery';
 
-import {configureStore} from '../../store/configureStore';
+import {configure} from '../../store/configureStore';
 import ConnectedTodoList, {TodoList} from '../../components/TodoList';
 import ConnectedTodo, {Todo} from '../../components/Todo';
 
@@ -32,7 +32,7 @@ describe('TodoList: ', () => {
       }
     ];
 
-    const store = configureStore({
+    const store = configure({
       todos
     });
     let provider = TestUtils.renderIntoDocument(

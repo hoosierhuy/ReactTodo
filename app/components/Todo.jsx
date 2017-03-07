@@ -21,7 +21,6 @@ export const Todo = React.createClass({
 
     return (
       <section className={todoClassName} onClick={() => {
-        // this.props.onToggle(id);
         dispatch(actions.toggleTodo(id));
       }}>
         <article>

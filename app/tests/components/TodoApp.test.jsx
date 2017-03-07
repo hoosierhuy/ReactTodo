@@ -15,7 +15,7 @@ describe('TodoApp: ', () => {
   });
 
   it('should render TodoList', () => {
-    const store = configureStore.configureStore();
+    const store = configureStore.configure();
     const provider = TestUtils.renderIntoDocument(
       <Provider store={store}>
         <TodoApp />
