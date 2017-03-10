@@ -1,4 +1,3 @@
-import uuid from 'node-uuid';
 import moment from 'moment';
 
 export const searchTextReducer = (state = '', action) => {
@@ -24,13 +23,7 @@ export const todosReducer = (state = [], action) => {
     case 'ADD_TODO':
       return [
         ...state,
-        {
-          id: uuid(),
-          text: action.text,
-          completed: false,
-          createdAt: moment().unix(),
-          completedAt: undefined,
-        },
+        action.todo,
       ];
     case 'TOGGLE_TODO':
       return state.map((todo) => {
