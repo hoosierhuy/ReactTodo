@@ -1,1 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+node_modules
+.gitignore
+.idea/ReactTodo.iml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/vcs.xml
+playground/
