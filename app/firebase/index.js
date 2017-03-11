@@ -2,7 +2,7 @@ import firebase from 'firebase';
 
 try {
   var config = {
-    apiKey: "get your own key",
+    apiKey: "get your own acc",
     authDomain: "",
     databaseURL: "",
     storageBucket: "",
