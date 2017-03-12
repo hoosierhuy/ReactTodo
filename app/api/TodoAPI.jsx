@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 const TodoAPI = {
   filterTodos: function (todos, showCompleted, searchText) {
     let filteredTodos = todos;
