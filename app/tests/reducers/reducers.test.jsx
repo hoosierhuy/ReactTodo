@@ -86,4 +86,31 @@ describe('Reducers', () => {
     });
   });
 
+  describe('authReducers', () => {
+    it('should store uid on LOGIN', () => {
+      const action = {
+        type: 'LOGIN',
+        uid: 'abc123',
+      };
+      const res = reducers.authReducer(undefined, deepFreeze(action));
+
+      expect(res).toEqual({
+        uid: action.uid,
+      });
+    });
+
+    it('should wipe auth on LOGOUT', () => {
+      const authData = {
+        uid: 'abc123',
+      };
+      const action = {
+        type: 'LOGOUT',
+      };
+
+      const res = reducers.authReducer(deepFreeze(authData), deepFreeze(action));
+
+      expect(res).toEqual({})
+    })
+  });
+
 });

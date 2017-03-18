@@ -7,6 +7,8 @@ import * as actions from '../../actions/actions';
 
 const createMockStore = configureMockStore([thunk]);
 
+// TODO: change lets to consts where appropriate
+
 describe('Actions', () => {
   it('should generate search text action', () => {
     let action = {
@@ -76,12 +78,31 @@ describe('Actions', () => {
   });
 
   it('should generate update todo action', () => {
-    let action = {
+    const action = {
       type: 'UPDATE_TODO',
       id: 7,
       updates: false,
     };
-    let res = actions.updateTodo(action.id, action.updates);
+    const res = actions.updateTodo(action.id, action.updates);
+
+    expect(res).toEqual(action);
+  });
+
+  it('should generate login action object', () => {
+    const action = {
+      type: 'LOGIN',
+      uid: 'abc123',
+    };
+    const res = actions.login(action.uid);
+
+    expect(res).toEqual(action);
+  });
+
+  it('should generate logout action object', () => {
+    const action = {
+      type: 'LOGOUT',
+    };
+    const res = actions.logout();
 
     expect(res).toEqual(action);
   });
