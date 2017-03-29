@@ -1,7 +1,7 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-import {searchTextReducer, showCompletedReducer, todosReducer, authReducer} from './../reducers/reducers';
+import {searchTextReducer, showCompletedReducer, todosReducer, authReducer} from '../reducers/reducers';
 
 export const configure = (initialState = {}) => {
   const reducer = redux.combineReducers({

@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import * as Redux from 'react-redux';
 
-import * as actions from './../actions/actions';
+import * as actions from '../actions/actions';
 
-export const Login = React.createClass({
+class Login extends Component {
+
+  constructor (props) {
+    super(props);
+
+    this.onLogin = this.onLogin.bind(this);
+  }
+
   onLogin() {
     const {dispatch} = this.props;
 
     dispatch(actions.startLogin());
-  },
+  }
 
   render() {
     return (
@@ -27,6 +34,7 @@ export const Login = React.createClass({
       </section>
     )
   }
-});
+
+}
 
 export default Redux.connect()(Login);

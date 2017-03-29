@@ -14,7 +14,7 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.jsx'
+    './app/app.js'
   ],
   externals: {
     jquery: 'jQuery'
@@ -53,9 +53,9 @@ module.exports = {
     alias: {
       app: 'app',
       applicationStyles: 'app/styles/app.scss',
-      actions: 'app/actions/actions.jsx',
-      reducers: 'app/reducers/reducers.jsx',
-      configureStore: 'app/store/configureStore.jsx'
+      actions: 'app/actions/actions.js',
+      reducers: 'app/reducers/reducers.js',
+      configureStore: 'app/store/configureStore.js'
     },
     extensions: ['', '.js', '.jsx']
   },

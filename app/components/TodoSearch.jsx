@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const TodoSearch = React.createClass({
-  render: function () {
+export class TodoSearch extends Component {
+
+  constructor (props) {
+    super (props);
+  }
+
+  render () {
     const {dispatch, showCompleted, searchText} = this.props;
     return (
       <section className="container__header">
@@ -15,16 +20,21 @@ export const TodoSearch = React.createClass({
         </article>
         <article>
           <label>
-            <input type="checkbox" ref="showCompleted" checked={showCompleted} onChange={() => {
+            <input
+              type="checkbox"
+              ref="showCompleted"
+              checked={showCompleted} onChange={() => {
               dispatch(actions.toggleShowCompleted());
-            }} />
+            }}
+            />
             Show Completed Todos
           </label>
         </article>
       </section>
     )
   }
-});
+
+}
 
 export default connect(
   (state) => {
