@@ -8,6 +8,11 @@
     margin: 0;
   }
 
+  input[type=checkbox] {
+    cursor: pointer;
+    transform:scale(1.4, 1.4);
+  }
+
   > :first-child {
     margin-right: 1rem;
   }
