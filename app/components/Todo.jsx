@@ -25,11 +25,15 @@ export class Todo extends Component {
   };
 
   return (
-    <section className={todoClassName} onClick={() => {
-      dispatch(actions.startToggleTodo(id, !completed));
-    }}>
+    <section className={todoClassName}>
       <article>
-        <input type="checkbox" checked={completed}/>
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => {
+            dispatch(actions.startToggleTodo(id, !completed));
+          }}
+        />
       </article>
       <article>
         <p>{text}</p>
