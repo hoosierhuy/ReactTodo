@@ -13,7 +13,7 @@ describe('Todo: ', () => {
   });
 
   it('should dispatch TOGGLE_TODO action on click', () => {
-    let todoData = {
+    const todoData = {
       id: 199,
       text: 'Write todo.test.jsx test',
       completed: true,
@@ -21,10 +21,10 @@ describe('Todo: ', () => {
     const action = actions.startToggleTodo(todoData.id, !todoData.completed);
 
     let spy = expect.createSpy();
-    let todo = TestUtils.renderIntoDocument(<Todo {...todoData} dispatch={spy} />);
-    let $el = $(ReactDOM.findDOMNode(todo));
+    let todo = TestUtils.renderIntoDocument(<Todo dispatch={spy} />);
 
-    TestUtils.Simulate.click($el[0]);
+    todo.refs.completed.checked = true;
+    TestUtils.Simulate.change(todo.refs.completed);
 
     expect(spy).toHaveBeenCalledWith(action);
   });

@@ -24,8 +24,8 @@ export class TodoSearch extends Component {
               type="checkbox"
               ref="showCompleted"
               checked={showCompleted} onChange={() => {
-              dispatch(actions.toggleShowCompleted());
-            }}
+                dispatch(actions.toggleShowCompleted());
+              }}
             />
             Show Completed Todos
           </label>

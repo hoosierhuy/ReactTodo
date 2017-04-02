@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import expect from 'expect';
 import TestUtils from 'react-addons-test-utils';
-import $ from 'jQuery';
 
 import {TodoSearch} from '../../components/TodoSearch';
 
@@ -27,7 +25,7 @@ describe('TodoSearch', () => {
   });
 
   it('should dispatch TOGGLE_SHOW_COMPLETED when checkbox checked', () => {
-    let action = {
+    const action = {
       type: 'TOGGLE_SHOW_COMPLETED',
     };
     let spy = expect.createSpy();
