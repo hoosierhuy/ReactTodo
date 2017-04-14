@@ -5,3 +5,6 @@ Mine uses Google's Firebase No-Sql database. Users log into the app using their 
 If you're interested in using and seeing the app, send me an email.
 
 Sensitive database creds are kept out of this repo for obvious reasons.
+
+Hosted here on my production NodeJS server:
+http://www.uproariouslaughter.com/react-redux-todo/
